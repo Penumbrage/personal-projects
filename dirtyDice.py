@@ -235,15 +235,22 @@ class GameArena(object):
                 pass
 
         
-
+# Create the die object
 myBeautifulDie = Dice()
 
+# Create the user object and give the user a die
 me = User()
 me.getDie(myBeautifulDie)
 
+# Create the computer object and give the computer a die
 compJoe = Computer()
 compJoe.getDie(myBeautifulDie)
 
+# Create the game object and insert the computer and the user into the game
 battle = GameArena(me, compJoe)
+
+# Prompt the user for an objective score
 battle.desiredScore()
+
+# Play the game
 battle.playGame()
